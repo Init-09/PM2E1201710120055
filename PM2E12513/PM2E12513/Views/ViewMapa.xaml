@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM02REC.Views.ViewMapa">
+    <ContentPage.Content>
+        <StackLayout>
+            <maps:Map IsShowingUser="True" x:Name="map" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"   />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

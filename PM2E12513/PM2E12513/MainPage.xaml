@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E12513.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             Shell.NavBarIsVisible="False">
+
+
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <StackLayout BackgroundColor="#f2f2f2" VerticalOptions="FillAndExpand" Margin="0,10,0,0" HorizontalOptions="Fill">
+                <Label Text="Hola juan" x:Name="lbl"
+                 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Button Text="Cerrar session" x:Name="btncerrar" Clicked="btncerrar_Clicked" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
+                        <Image x:Name="imgCam" Source="https://www.segundamano.mx/img/nga/inmuebles.png" VerticalOptions="Center" HeightRequest="128" />
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+                    <Button Margin="0,10,0,0" Text="Tomar Foto"
+                        x:Name="btnCam"
+                        CornerRadius="190"
+                        Clicked="BtnCam_Clicked"
+                        BackgroundColor="CadetBlue"
+                        TextColor="White" />
+                    <Label Margin="0,10,0,0"  Text="Latitud"></Label>
+
+                    <Entry Text=""  Keyboard="Text" x:Name="txtlatitud" TextColor="Black" />
+                    <Label  Text="Longitud"></Label>
+
+                    <Entry Text=""  Keyboard="Text"  TextColor="Black" x:Name="txtlongitud" />
+
+                    <Label  Text="Descripcion larga"></Label>
+
+                    <Entry Text=""  Keyboard="Text" x:Name="txtdescripcion"/>
+
+                    <Label  Text="Descripcion corta"></Label>
+                    <Entry Text=""  Keyboard="Text" x:Name="txtdcorta"/>
+
+                    <Button x:Name="btnguardar"
+                    CornerRadius="190"
+                    Margin="0,10,0,0" Text="Salvar" 
+                    BackgroundColor="CadetBlue"
+                    TextColor="White"  Clicked="btnguardar_Clicked" />
+                    <Button 
+                    CornerRadius="190" x:Name="ubicaciones"
+                    Margin="0,10,0,0" Text="Lista"  TextColor="White"
+                    BackgroundColor="CadetBlue"  Clicked="btn02_Clicked"/>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+
+
+
+
+
+</ContentPage>

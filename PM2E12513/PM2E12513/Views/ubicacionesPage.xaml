@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E12513.Views.ubicacionesPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry IsVisible="false" x:Name="txtcodigo" ></Entry>
+            <Entry IsVisible="false" x:Name="txtlatitud" ></Entry>
+            <Entry IsVisible="false" x:Name="txtlongitud" ></Entry>
+            <Entry IsVisible="false" x:Name="txtdescripcion" ></Entry>
+            <Entry IsVisible="false" x:Name="txtdcorta" ></Entry>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+
+    <ListView x:Name="lstUbicaciones"  ItemTapped="lstUbicaciones_ItemTapped"  >
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell >
+
+                    <Grid>
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="{Binding codigo}" Grid.Row="0" Grid.Column="0"  TextColor="Blue" />
+                        <Label Text="{Binding latitud}" Grid.Row="0" Grid.Column="1"  TextColor="Blue"/>
+                        <Label Text="{Binding longitud}" Grid.Row="0" Grid.Column="2" TextColor="Blue"/>
+                        <Label Text="{Binding descripcion}" Grid.Row="0" Grid.Column="3"       TextColor="Blue"/>
+                        <Label Text="{Binding descripcionCorta}" Grid.Row="0" Grid.Column="4"  TextColor="Blue"/>
+                        
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Editar/Eliminar"
+                     Clicked="tlbeliminar_Clicked"
+                     x:Name="tlbeliminar"></ToolbarItem>
+        
+        <ToolbarItem Text="Maps"
+                     Clicked="tlbmostrar_Clicked"
+                     x:Name="tlbmostrar" ></ToolbarItem>
+
+        <ToolbarItem Text="Local"
+                     Clicked="tlbver_Clicked"
+                     x:Name="tlbver" ></ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+
+</ContentPage>
