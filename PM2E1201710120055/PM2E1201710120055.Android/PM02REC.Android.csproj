@@ -97,7 +97,7 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PM2E12513\PM02REC.csproj">
+    <ProjectReference Include="..\PM2E1201710120055\PM02REC.csproj">
       <Project>{7DAE13AC-B98C-45E8-93AA-D5AD9EB99B6A}</Project>
       <Name>PM02REC</Name>
     </ProjectReference>
